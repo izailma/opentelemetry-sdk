@@ -13,6 +13,6 @@ func rolldice(writter http.ResponseWriter, request *http.Request) {
 
 	resp := strconv.Itoa(roll) + "\n"
 	if _, err := io.WriteString(writter, resp); err != nil {
-		log.Println("Error writing response: %v\n", err)
+		log.Printf("Error writing response: %v\n", err)
 	}
 }
